@@ -12,9 +12,9 @@ public class LoginApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         Font.loadFont(getClass().getResourceAsStream("/font/Jersey15-Regular.ttf"), 14);
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("register.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
-        stage.setTitle("Login");
+        stage.setTitle("Register");
         stage.setScene(scene);
         stage.show();
     }
