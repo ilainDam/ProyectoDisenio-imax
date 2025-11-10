@@ -1,0 +1,10 @@
+@import url(root.css);
+#root{
+    -fx-font-family: 'Jersey 15';
+}
+#izquierda{
+    -fx-background-color: -fx-secundario-rs-color;
+}
+#derecha{
+    -fx-background-color: -fx-principal-bg-color;
+}
