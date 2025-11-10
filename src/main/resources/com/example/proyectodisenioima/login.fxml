@@ -8,6 +8,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
@@ -15,19 +17,35 @@
 
 <HBox id="root" alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.LoginController">
    <children>
-      <VBox id="izquierda" prefHeight="1080.0" prefWidth="1008.0">
+      <VBox id="izquierda" alignment="CENTER" prefHeight="1080.0" prefWidth="1008.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesion" textAlignment="CENTER" wrappingWidth="1002.1279296875">
+            <ImageView fitHeight="610.0" fitWidth="604.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <image>
+                  <Image url="@../../../IMG/logo-lockit.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido a Lock It">
                <font>
-                  <Font name="Arial Black" size="62.0" />
+                  <Font size="42.0" />
                </font>
-            </Text>
+               <VBox.margin>
+                  <Insets bottom="100.0" />
+               </VBox.margin></Text>
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Termina de registrarte para poder acceder a las funciones de lock it" textAlignment="CENTER" wrappingWidth="692.546875">
+               <font>
+                  <Font size="42.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="250.0" />
+               </VBox.margin></Text>
          </children>
       </VBox>
-      <VBox id="derecha" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+      <VBox id="derecha" prefHeight="1080.0" prefWidth="1008.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesion" textAlignment="CENTER" wrappingWidth="1002.1279296875">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Iniciar sesion" textAlignment="CENTER" wrappingWidth="958.1279296875">
                <font>
                   <Font name="Arial Black" size="62.0" />
                </font>
@@ -35,39 +53,71 @@
                   <Insets top="60.0" />
                </VBox.margin>
             </Text>
-            <Label alignment="CENTER" prefHeight="153.0" prefWidth="1000.0" text="Email o Usuario" VBox.vgrow="ALWAYS">
-               <graphic>
-                  <TextField fx:id="email" alignment="CENTER" prefHeight="87.0" prefWidth="371.0" />
-               </graphic>
+            <Label alignment="CENTER" prefHeight="79.0" prefWidth="265.0" text="Email o Usuario" VBox.vgrow="ALWAYS">
                <font>
-                  <Font size="35.0" />
+                  <Font size="32.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="100.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="email" alignment="CENTER" maxWidth="700.0" prefHeight="100.0" prefWidth="562.0" styleClass="introducirDatos">
+               <VBox.margin>
+                  <Insets left="150.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="42.0" />
+               </font>
+            </TextField>
+            <Label alignment="BOTTOM_CENTER" prefHeight="109.0" prefWidth="429.0" text="Contraseña" textAlignment="CENTER">
+               <font>
+                  <Font size="32.0" />
                </font>
             </Label>
-            <Label prefHeight="141.0" prefWidth="617.0" text="Contraseña">
+            <PasswordField fx:id="contrasenia" maxWidth="700.0" prefHeight="100.0" prefWidth="700.0" styleClass="introducirDatos">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets left="150.0" />
+               </VBox.margin>
                <font>
-                  <Font size="35.0" />
+                  <Font size="42.0" />
                </font>
-               <graphic>
-                  <PasswordField fx:id="contrasenia" />
-               </graphic>
-            </Label>
+            </PasswordField>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <CheckBox alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="420.0" text="Guardar sesion" textAlignment="CENTER">
+                  <CheckBox id="guardarSesion" mnemonicParsing="false" prefHeight="99.0" prefWidth="281.0" text="Guardar sesion">
                      <font>
-                        <Font size="35.0" />
+                        <Font size="32.0" />
                      </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
                   </CheckBox>
-                  <Hyperlink prefHeight="101.0" prefWidth="500.0" text="¿Olvidaste tu contraseña??" textAlignment="CENTER">
+                  <Hyperlink prefHeight="100.0" prefWidth="383.0" text="¿Olvidaste tu contraseña??" textAlignment="CENTER">
                      <font>
-                        <Font size="35.0" />
+                        <Font size="32.0" />
                      </font>
                   </Hyperlink>
                </children>
             </HBox>
-            <Button fx:id="enviar" mnemonicParsing="false" onAction="#onLogin" prefHeight="115.0" prefWidth="390.0" text="Enviar">
+            <Button id="enviar" fx:id="enviar" mnemonicParsing="false" onAction="#onLogin" prefHeight="115.0" prefWidth="390.0" text="Iniciar sesion">
                <font>
                   <Font size="35.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="300.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#abrirHistorialAcciones" text="Abrir">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cerrarVentana" text="Cerrar">
+               <font>
+                  <Font size="32.0" />
                </font>
             </Button>
          </children>

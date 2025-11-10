@@ -1,6 +1,6 @@
 @font-face {
-    font-family: "Jersey";
-    src: url("../font/Jersey15-Regular.ttf");
+    font-family: "Jersey 15";
+    src: url("../font/Jersey15-Regular.ttf") format("truetype");
 }
 *{
     -fx-principal-bg-color:#FFEECF;
@@ -10,6 +10,5 @@
     -fx-terciario-rs-color:#04F06A;
     -fx-principal-font-color:black;
     -fx-secundario-font-color:white;
-    -fx-font-family: 'Jersey';
-
+    -fx-font-family: 'Jersey 15';
 }

@@ -2,12 +2,17 @@ package com.example.proyectodisenioima;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class LoginController {
@@ -23,8 +28,32 @@ public class LoginController {
             linea = leer.nextLine();
             lineaSeparada = linea.split(",");
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
-                System.out.println("estas dentro");
+                abrirHistorialAcciones(event);
+                break;
             }
         }
+        leer.close();
+    }
+    
+    @FXML
+    protected void abrirHistorialAcciones(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("historialDeAcciones.fxml"));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 1920, 1080);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setTitle("Historial de Acciones");
+            stage.show();
+            
+        } catch ( Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
+    @FXML
+    protected void cerrarVentana(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.close();
     }
 }
