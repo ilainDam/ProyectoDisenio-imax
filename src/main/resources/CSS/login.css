@@ -1,10 +1,22 @@
 @import url(root.css);
-#root{
-    -fx-font-family: 'Jersey 15';
-}
 #izquierda{
     -fx-background-color: -fx-secundario-rs-color;
 }
 #derecha{
     -fx-background-color: -fx-principal-bg-color;
+}
+.introducirDatos,#enviar{
+    -fx-border-color: black;
+    -fx-border-width: 2px;
+}
+.introducirDatos{
+    -fx-background-color: -fx-secundario-bg-color;
+}
+#enviar{
+    -fx-background-color: -fx-principal-rs-color ;
+}
+#guardarSesion .box{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 2px;
 }
