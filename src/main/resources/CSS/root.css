@@ -12,3 +12,12 @@
     -fx-secundario-font-color:white;
     -fx-font-family: 'Jersey 15';
 }
+.fuente32{
+    -fx-font-size: 32px;
+}
+.fuente42{
+    -fx-font-size: 42px;
+}
+.fuente62{
+    -fx-font-size: 62px;
+}
