@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -24,13 +25,21 @@ public class LoginController {
         Scanner leer = new Scanner(new File("usuarios.txt"));
         String[] lineaSeparada;
         String linea;
+        Boolean encontrado=false;
         while (leer.hasNext()){
             linea = leer.nextLine();
             lineaSeparada = linea.split(",");
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
                 abrirHistorialAcciones(event);
+                encontrado=true;
                 break;
             }
+        }
+        if (!encontrado){
+            Alert alerta = new Alert(Alert.AlertType.ERROR);
+            alerta.setTitle("Credenciales incorrectos");
+            alerta.setContentText("Las credenciales son incorrectas revise la escritura o si no se acuerda de la contraseña dele al boton ¿Olvidaste tu contraseña?");
+            alerta.showAndWait();
         }
         leer.close();
     }
@@ -43,6 +52,7 @@ public class LoginController {
             Scene scene = new Scene(root, 1920, 1080);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
+            stage.setFullScreen(true);
             stage.setTitle("Historial de Acciones");
             stage.show();
             

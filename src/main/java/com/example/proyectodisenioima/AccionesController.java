@@ -28,6 +28,7 @@ public class AccionesController implements Initializable {
             Scene scene = new Scene(root, 1920, 1080);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
+            stage.setFullScreen(true);
             stage.setTitle("Login");
             stage.show();
         } catch (IOException e) {

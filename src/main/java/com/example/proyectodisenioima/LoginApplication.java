@@ -3,9 +3,9 @@ package com.example.proyectodisenioima;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
 public class LoginApplication extends Application {
@@ -16,6 +16,8 @@ public class LoginApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
         stage.setTitle("Register");
         stage.setScene(scene);
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/logo-lockit.png")));
+        stage.setFullScreen(true);
         stage.show();
     }
 }
