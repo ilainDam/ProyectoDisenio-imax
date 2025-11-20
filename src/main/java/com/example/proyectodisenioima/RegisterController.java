@@ -22,7 +22,7 @@ public class RegisterController {
 
     @FXML
     protected void onRegister(ActionEvent event) throws IOException {
-        FileWriter fw = new FileWriter(new File("usuarios.txt"));
+        FileWriter fw = new FileWriter("usuarios.txt",true);
         BufferedWriter escribir = new BufferedWriter(fw);
         if (contraseniaRepetida.getText().equals(contrasenia.getText())){
             escribir.write(email.getText()+","+contraseniaRepetida.getText());
