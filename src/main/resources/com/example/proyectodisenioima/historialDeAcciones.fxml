@@ -15,7 +15,7 @@
    </stylesheets>
    <children>
       <fx:include source="barraSuperior.fxml" />
-      <Label id="tituloAcciones" alignment="CENTER" prefHeight="100.0" prefWidth="1920.0" text="Historial de acciones" textAlignment="CENTER">
+      <Label id="tituloAcciones" alignment="CENTER" prefHeight="150.0" prefWidth="1920.0" text="Historial de acciones" textAlignment="CENTER">
          <font>
             <Font size="62.0" />
          </font>
