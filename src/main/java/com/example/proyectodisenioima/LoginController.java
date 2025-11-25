@@ -46,19 +46,7 @@ public class LoginController {
     
     @FXML
     protected void abrirHistorialAcciones(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("historialDeAcciones.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root, 1920, 1080);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-            stage.setTitle("Historial de Acciones");
-            stage.show();
-            
-        } catch ( Exception e) {
-            e.printStackTrace();
-        }
+        new Utilidades().abrirVentana(event,"historialDeAcciones.fxml","Historial de acciones");
     }
     
     @FXML

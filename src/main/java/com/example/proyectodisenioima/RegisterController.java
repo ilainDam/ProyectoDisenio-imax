@@ -39,19 +39,7 @@ public class RegisterController {
 
     @FXML
     protected void abrirLogin(ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("login.fxml"));
-            Parent root = loader.load();
-            Scene scene = new Scene(root, 1920, 1080);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.setFullScreen(true);
-            stage.setTitle("Login");
-            stage.showAndWait();
-
-        } catch ( Exception e) {
-            e.printStackTrace();
-        }
+        new Utilidades().abrirVentana(event,"login.fxml","Login");
     }
 
     @FXML

@@ -1,0 +1,28 @@
+package com.example.proyectodisenioima;
+
+import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+
+public class Utilidades {
+    public void abrirVentana(ActionEvent event,String ventanaFXML,String titulo) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource(ventanaFXML));
+            Parent root = loader.load();
+            Scene scene = new Scene(root, 1920, 1080);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.setFullScreen(true);
+            stage.setTitle(titulo);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Error al cargar login: " + e.getMessage());
+        }
+    }
+}

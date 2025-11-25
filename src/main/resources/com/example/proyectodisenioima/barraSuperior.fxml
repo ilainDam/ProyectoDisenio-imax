@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+
+<HBox prefHeight="100.0" prefWidth="1980.0" stylesheets="@../../../CSS/root.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.BarraSuperiorController">
+   <children>
+      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Bloquear archivos">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <styleClass>
+            <String fx:value="menuSuperior" />
+            <String fx:value="fuente42" />
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Archivos Bloqueados">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <styleClass>
+            <String fx:value="menuSuperior" />
+            <String fx:value="fuente42" />
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Historial de acciones">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <styleClass>
+            <String fx:value="menuSuperior" />
+            <String fx:value="fuente42" />
+         </styleClass>
+      </Button>
+      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Ajustes y Preferencias">
+         <font>
+            <Font size="42.0" />
+         </font>
+         <styleClass>
+            <String fx:value="menuSuperior" />
+            <String fx:value="fuente42" />
+         </styleClass>
+      </Button>
+   </children>
+</HBox>
