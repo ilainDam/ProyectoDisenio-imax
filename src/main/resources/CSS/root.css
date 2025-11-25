@@ -25,3 +25,8 @@
      -fx-border-color: black;
      -fx-border-width: 4px;
  }
+ .tituloApartado{
+     -fx-background-color: -fx-principal-rs-color;
+     -fx-border-color: black;
+     -fx-border-width: 0 4px 4px 4px;
+ }

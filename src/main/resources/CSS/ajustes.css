@@ -1,0 +1,12 @@
+.contenedor{
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+}
+.botonOpciones{
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-background-color: -fx-terciario-rs-color ;
+}
+#fondo{
+    -fx-background-color:-fx-principal-bg-color;
+}

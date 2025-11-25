@@ -2,11 +2,6 @@
 #root{
     -fx-background-color: -fx-principal-bg-color;
 }
-#tituloAcciones{
-    -fx-background-color: -fx-principal-rs-color;
-    -fx-border-color: black;
-    -fx-border-width: 0 4px 4px 4px;
-}
 .informacionTabla{
     -fx-background-color: -fx-terciario-rs-color;
     -fx-border-color: black;
