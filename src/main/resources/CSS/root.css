@@ -11,7 +11,9 @@
     -fx-principal-font-color:black;
     -fx-secundario-font-color:white;
     -fx-font-family: 'Jersey 15';
+    -fx-especial:black;
 }
+
 .fuente32{
     -fx-font-size: 32px;
 }

@@ -1,0 +1,23 @@
+Blanco
+*{
+    -fx-principal-bg-color: #FFFFFF;
+    -fx-secundario-bg-color: #F5F5F5;
+    -fx-principal-rs-color: #FFFFFF;
+    -fx-secundario-rs-color: #E0E0E0;
+    -fx-terciario-rs-color: #CCCCCC;
+    -fx-principal-font-color: black;
+    -fx-secundario-font-color: #000000;
+    -fx-font-family: 'Jersey 15';
+    -fx-especial:white;
+}
+Negro falta repasar bastante
+*{
+      -fx-principal-bg-color: #000000;
+      -fx-secundario-bg-color: #1A1A1A;
+      -fx-principal-rs-color: #000000;
+      -fx-secundario-rs-color: #2E2E2E;
+      -fx-terciario-rs-color: #444444;
+      -fx-principal-font-color: #FFFFFF;
+      -fx-secundario-font-color: #FFFFFF;
+      -fx-font-family: 'Jersey 15';
+  }

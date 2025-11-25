@@ -10,3 +10,19 @@
 #fondo{
     -fx-background-color:-fx-principal-bg-color;
 }
+.botonInterno{
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-background-color: -fx-principal-rs-color ;
+}
+#blanco{
+    -fx-background-color:white;
+}
+#negro{
+    -fx-background-color:-fx-especial;
+    -fx-text-fill:-fx-principal-font-color;
+    -fx-border-color: -fx-principal-font-color;
+}
+#personalizado{
+    -fx-background-color: -fx-secundario-bg-color;
+}
