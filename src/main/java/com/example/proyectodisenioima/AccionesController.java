@@ -13,13 +13,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class AccionesController implements Initializable {
+public class AccionesController {
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println("Controlador de Acciones inicializado");
-    }
-    
     @FXML
     protected void abrirLogin(ActionEvent event) {
         new Utilidades().abrirVentana(event,"login.fxml","Login");
