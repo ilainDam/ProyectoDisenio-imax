@@ -11,7 +11,7 @@ public class BarraSuperiorController {
         new Utilidades().abrirVentana(event,"historialDeAcciones.fxml","Historial de acciones");
     }
     public void abrirBloqueados(ActionEvent event) {
-        new Utilidades().abrirVentana(event,"archivosBloqueados.fxml","Archivos bloqueados");
+        new Utilidades().abrirVentana(event,"trabajando.fxml","trabajando");
     }
     public void abrirAjustes(ActionEvent event) {
         new Utilidades().abrirVentana(event,"ajustes.fxml","ajustes");
