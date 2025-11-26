@@ -73,7 +73,7 @@
 
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <Hyperlink id="cuenta" onAction="#abrirLogin" prefHeight="100.0" prefWidth="347.0" styleClass="fuente32" text="¿Tienes ya una cuenta?" textAlignment="CENTER" />
+                        <Hyperlink id="cuenta" onAction="#abrirLogin" prefHeight="100.0" prefWidth="296.0" styleClass="fuente32" text="¿Tienes ya una cuenta?" textAlignment="CENTER" />
                     </children>
                 </HBox>
 
