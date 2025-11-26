@@ -21,7 +21,7 @@ public class LoginController {
     @FXML private PasswordField contrasenia;
 
     @FXML
-    protected void onLogin(ActionEvent event) throws FileNotFoundException {
+    public void onLogin(ActionEvent event) throws FileNotFoundException {
         Scanner leer = new Scanner(new File("usuarios.txt"));
         String[] lineaSeparada;
         String linea;
@@ -45,12 +45,12 @@ public class LoginController {
     }
     
     @FXML
-    protected void abrirHistorialAcciones(ActionEvent event) {
+    public void abrirHistorialAcciones(ActionEvent event) {
         new Utilidades().abrirVentana(event,"historialDeAcciones.fxml","Historial de acciones");
     }
     
     @FXML
-    protected void cerrarVentana(ActionEvent event) {
+    public void cerrarVentana(ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }

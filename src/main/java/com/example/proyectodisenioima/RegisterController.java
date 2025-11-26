@@ -21,7 +21,7 @@ public class RegisterController {
     @FXML private PasswordField contraseniaRepetida;
 
     @FXML
-    protected void onRegister(ActionEvent event) throws IOException {
+    public void onRegister(ActionEvent event) throws IOException {
         FileWriter fw = new FileWriter("usuarios.txt",true);
         BufferedWriter escribir = new BufferedWriter(fw);
         if (contraseniaRepetida.getText().equals(contrasenia.getText())){
@@ -38,12 +38,12 @@ public class RegisterController {
     }
 
     @FXML
-    protected void abrirLogin(ActionEvent event) {
+    public void abrirLogin(ActionEvent event) {
         new Utilidades().abrirVentana(event,"login.fxml","Login");
     }
 
     @FXML
-    protected void cerrarVentana(ActionEvent event) {
+    public void cerrarVentana(ActionEvent event) {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.close();
     }

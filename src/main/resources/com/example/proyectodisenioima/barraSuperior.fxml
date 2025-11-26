@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.text.Font?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-
-<HBox prefHeight="100.0" prefWidth="1980.0" stylesheets="@../../../CSS/root.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.BarraSuperiorController">
+<HBox prefHeight="100.0" prefWidth="1980.0" stylesheets="@../../../CSS/root.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.BarraSuperiorController">
    <children>
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Bloquear archivos">
+      <Button mnemonicParsing="false" onAction="#abrirBloquear" prefHeight="100.0" prefWidth="500.0" text="Bloquear archivos">
          <font>
             <Font size="42.0" />
          </font>
@@ -17,7 +16,7 @@
             <String fx:value="fuente42" />
          </styleClass>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Archivos Bloqueados">
+      <Button mnemonicParsing="false" onAction="#abrirBloqueados" prefHeight="100.0" prefWidth="500.0" text="Archivos Bloqueados">
          <font>
             <Font size="42.0" />
          </font>
@@ -26,7 +25,7 @@
             <String fx:value="fuente42" />
          </styleClass>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Historial de acciones">
+      <Button mnemonicParsing="false" onAction="#abrirAcciones" prefHeight="100.0" prefWidth="500.0" text="Historial de acciones">
          <font>
             <Font size="42.0" />
          </font>
