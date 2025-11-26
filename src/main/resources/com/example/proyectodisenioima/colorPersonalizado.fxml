@@ -1,14 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.proyectodisenioima.ColorPersonalizadoController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<VBox id="root" alignment="TOP_CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.ColorPersonalizadoController">
+   <stylesheets>
+      <URL value="@../../../CSS/root.css" />
+      <URL value="@../../../CSS/colorPersonalizado.css" />
+   </stylesheets>
+   <children>
+      <fx:include source="barraSuperior.fxml" />
+      <Label alignment="CENTER" prefHeight="150.0" prefWidth="1980.0" text="Seleccionador de colores personalizados" textAlignment="CENTER">
+         <styleClass>
+            <String fx:value="tituloApartado" />
+            <String fx:value="fuente62" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color principal del fondo">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color secundario del fondo">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color principal de resaltado">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color secundario del resaltado">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color terciario del resaltado">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color principal de la fuente">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="BOTTOM" prefHeight="110.0" prefWidth="1980.0" text="Color secundario de la fuente">
+         <graphic>
+            <ColorPicker />
+         </graphic>
+         <styleClass>
+            <String fx:value="seleccionador" />
+            <String fx:value="fuente32" />
+         </styleClass>
+      </Label>
+   </children>
 </VBox>
