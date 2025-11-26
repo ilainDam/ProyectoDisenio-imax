@@ -1,6 +1,8 @@
 #root{
     -fx-background-color: -fx-principal-bg-color;
 }
-.seleccionador{
-
+#botonEnviar{
+    -fx-border-color: black;
+    -fx-border-width: 4px;
+    -fx-background-color:  -fx-secundario-bg-color;
 }
