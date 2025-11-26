@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
@@ -15,6 +16,9 @@
             <String fx:value="menuSuperior" />
             <String fx:value="fuente42" />
          </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button mnemonicParsing="false" onAction="#abrirBloqueados" prefHeight="100.0" prefWidth="500.0" text="Archivos Bloqueados">
          <font>
@@ -24,6 +28,9 @@
             <String fx:value="menuSuperior" />
             <String fx:value="fuente42" />
          </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
       <Button mnemonicParsing="false" onAction="#abrirAcciones" prefHeight="100.0" prefWidth="500.0" text="Historial de acciones">
          <font>
@@ -33,8 +40,11 @@
             <String fx:value="menuSuperior" />
             <String fx:value="fuente42" />
          </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
-      <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="500.0" text="Ajustes y Preferencias">
+      <Button mnemonicParsing="false" onAction="#abrirAjustes" prefHeight="100.0" prefWidth="500.0" text="Ajustes y Preferencias">
          <font>
             <Font size="42.0" />
          </font>
@@ -42,6 +52,9 @@
             <String fx:value="menuSuperior" />
             <String fx:value="fuente42" />
          </styleClass>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </Button>
    </children>
 </HBox>

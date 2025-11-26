@@ -84,10 +84,6 @@
                </cursor>
                 </Button>
 
-                <Button mnemonicParsing="false" onAction="#abrirLogin" styleClass="fuente32" text="Abrir" />
-
-                <Button mnemonicParsing="false" onAction="#cerrarVentana" styleClass="fuente32" text="Cerrar" />
-
             </children>
         </VBox>
     </children>

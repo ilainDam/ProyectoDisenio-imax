@@ -87,10 +87,6 @@
                         <Cursor fx:constant="HAND" />
                     </cursor>
                 </Button>
-                <Button mnemonicParsing="false" onAction="#abrirHistorialAcciones" styleClass="fuente32" text="Abrir">
-                </Button>
-                <Button mnemonicParsing="false" onAction="#cerrarVentana" styleClass="fuente32" text="Cerrar">
-                </Button>
             </children>
             <opaqueInsets>
                 <Insets />

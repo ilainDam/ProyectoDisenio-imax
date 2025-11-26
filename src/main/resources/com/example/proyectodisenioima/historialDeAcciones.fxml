@@ -66,15 +66,5 @@
             </Label>
          </children>
       </FlowPane>
-      <Button mnemonicParsing="false" onAction="#abrirLogin" styleClass="fuente32" text="Abrir">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Button>
-      <Button mnemonicParsing="false" onAction="#cerrarVentana" styleClass="fuente32" text="Cerrar">
-         <font>
-            <Font size="32.0" />
-         </font>
-      </Button>
    </children>
 </VBox>

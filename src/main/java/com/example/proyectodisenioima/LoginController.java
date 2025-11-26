@@ -30,7 +30,7 @@ public class LoginController {
             linea = leer.nextLine();
             lineaSeparada = linea.split(",");
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
-                abrirHistorialAcciones(event);
+                abrirBloquearArchivos(event);
                 encontrado=true;
                 break;
             }
@@ -45,8 +45,8 @@ public class LoginController {
     }
     
     @FXML
-    public void abrirHistorialAcciones(ActionEvent event) {
-        new Utilidades().abrirVentana(event,"historialDeAcciones.fxml","Historial de acciones");
+    public void abrirBloquearArchivos(ActionEvent event) {
+        new Utilidades().abrirVentana(event,"bloquearArchivos.fxml","Bloquear Archivos");
     }
     
     @FXML
