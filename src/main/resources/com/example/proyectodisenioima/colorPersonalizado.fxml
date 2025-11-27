@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import java.net.URL?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ColorPicker?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 
-<VBox id="root" alignment="TOP_CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.ColorPersonalizadoController">
+<VBox id="root" alignment="TOP_CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.ColorPersonalizadoController">
    <stylesheets>
       <URL value="@../../../CSS/root.css" />
       <URL value="@../../../CSS/colorPersonalizado.css" />
@@ -28,7 +27,10 @@
                <children>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color principal del fondo">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="uno">
+                           <value>
+                              <Color red="1.0" green="0.9333333373069763" blue="0.8117647171020508" />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -40,7 +42,10 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color secundario del fondo">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="dos">
+                           <value>
+                              <Color red="1.0" green="0.7686274647712708" blue="0.5098039507865906" />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -52,7 +57,10 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color principal de resaltado">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="tres">
+                           <value>
+                              <Color red="0.3960784375667572" green="0.8705882430076599" blue="0.9450980424880981" />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -64,7 +72,10 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color secundario del resaltado">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="cuatro">
+                           <value>
+                              <Color red="0.16862745583057404" green="0.3490196168422699" blue="0.7647058963775635" />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -76,7 +87,10 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color terciario del resaltado">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="cinco">
+                           <value>
+                              <Color red="0.01568627543747425" green="0.9411764740943909" blue="0.4156862795352936" />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -88,7 +102,10 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color principal de la fuente">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="seis">
+                           <value>
+                              <Color />
+                           </value></ColorPicker>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -100,7 +117,7 @@
                   </Label>
                   <Label alignment="CENTER" contentDisplay="RIGHT" prefHeight="110.0" prefWidth="1980.0" text="Color secundario de la fuente">
                      <graphic>
-                        <ColorPicker />
+                        <ColorPicker fx:id="siete"/>
                      </graphic>
                      <styleClass>
                         <String fx:value="seleccionador" />
@@ -110,7 +127,10 @@
                         <Insets bottom="10.0" right="10.0" top="10.0" />
                      </padding>
                   </Label>
-                  <Button id="botonEnviar" fx:id="botonEnviar" mnemonicParsing="false" prefHeight="20.0" prefWidth="300.0" styleClass="fuente32" text="Cambiar colores" />
+                  <Button id="botonEnviar" fx:id="botonEnviar" mnemonicParsing="false" onAction="#onBotonEnviar" prefHeight="20.0" prefWidth="300.0" styleClass="fuente32" text="Cambiar colores">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
                </children>
             </VBox>
          </children>
