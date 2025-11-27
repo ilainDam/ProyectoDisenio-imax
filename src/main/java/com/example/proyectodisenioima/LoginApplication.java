@@ -16,7 +16,7 @@ public class LoginApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
         stage.setTitle("Register");
         stage.setScene(scene);
-        stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/logo-lockit.png")));
+        stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/icono.png")));
         stage.setFullScreen(true);
         stage.show();
     }
