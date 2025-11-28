@@ -7,30 +7,31 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.Scanner;
 
 public class LoginController {
     @FXML private TextField email;
     @FXML private PasswordField contrasenia;
+    @FXML private CheckBox guardarSesion;
 
     @FXML
-    public void onLogin(ActionEvent event) throws FileNotFoundException {
+    public void onLogin(ActionEvent event) throws IOException {
         Scanner leer = new Scanner(new File("usuarios.txt"));
         String[] lineaSeparada;
         String linea;
-        Boolean encontrado=false;
+        boolean encontrado=false;
         while (leer.hasNext()){
             linea = leer.nextLine();
             lineaSeparada = linea.split(",");
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
                 abrirBloquearArchivos(event);
+                if (guardarSesion.isSelected()){guardarSesion();}
                 encontrado=true;
                 break;
             }
@@ -48,10 +49,10 @@ public class LoginController {
     public void abrirBloquearArchivos(ActionEvent event) {
         new Utilidades().abrirVentana(event,"bloquearArchivos.fxml","Bloquear Archivos");
     }
-    
-    @FXML
-    public void cerrarVentana(ActionEvent event) {
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        stage.close();
+    public void guardarSesion() throws IOException {
+        FileWriter fw = new FileWriter("sesionGuardada.txt");
+        BufferedWriter escribir = new BufferedWriter(fw);
+        escribir.write(email.getText()+","+contrasenia.getText());
+        escribir.close();
     }
 }

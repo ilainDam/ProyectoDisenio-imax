@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -18,7 +19,9 @@ public class Utilidades {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.setFullScreen(true);
+            stage.setFullScreenExitHint("");
             stage.setTitle(titulo);
+            stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/icono.png")));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();

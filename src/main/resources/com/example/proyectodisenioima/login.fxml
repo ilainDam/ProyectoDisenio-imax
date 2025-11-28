@@ -70,7 +70,7 @@
                 </PasswordField>
                 <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                     <children>
-                        <CheckBox id="guardarSesion" mnemonicParsing="false" prefHeight="99.0" prefWidth="281.0" styleClass="fuente32" text="Guardar sesion">
+                        <CheckBox id="guardarSesion" fx:id="guardarSesion" mnemonicParsing="false" prefHeight="99.0" prefWidth="281.0" styleClass="fuente32" text="Guardar sesion">
                             <HBox.margin>
                                 <Insets />
                             </HBox.margin>
