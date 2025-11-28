@@ -2,18 +2,21 @@ package com.example.proyectodisenioima;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
+import javafx.scene.Cursor;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class AjustesController {
 
     @FXML
-    private VBox nodo;
+    private VBox nodoAjustes;
     @FXML
     public void onOriginal() throws IOException {
         this.crearCss("#FFEECF","#FFC482","#65DEF1","#2B59C3","#04F06A","black","white");
@@ -80,7 +83,6 @@ public class AjustesController {
 
         escribir.write(css);
         escribir.close();
-        this.resetearCSS();
     }
 
     public void crearCss(String pbg,
@@ -130,11 +132,36 @@ public class AjustesController {
 
         escribir.write(css);
         escribir.close();
-        this.resetearCSS();
     }
-    private void resetearCSS() {
-        Scene escena = nodo.getScene();
-        escena.getStylesheets().clear();
-        escena.getStylesheets().add(new File("src/main/resources/CSS/root.css").toURI().toString());
+    public void onAjustesUsuario(){
+       nodoAjustes.getChildren().clear();
+//Personalizacion
+        Label lblPersonalizacion = new Label("Ajustes de usuario");
+        lblPersonalizacion.setAlignment(Pos.CENTER);
+        lblPersonalizacion.setPrefSize(1300, 85);
+        lblPersonalizacion.getStyleClass().addAll("fuente42", "botonOpciones");
+        VBox.setMargin(lblPersonalizacion, new Insets(25, 0, 0, 25));
+//Temas
+        Label lblTemas = new Label("Informacion del usuario");
+        lblTemas.setPrefSize(1356, 50);
+        lblTemas.getStyleClass().add("fuente32");
+        VBox.setMargin(lblTemas, new Insets(20, 0, 0, 0));
+        lblTemas.setPadding(new Insets(0, 0, 0, 30));
+//Original
+        HBox hbox = new HBox();
+        hbox.setAlignment(Pos.CENTER_LEFT);
+        hbox.setPrefSize(200, 100);
+        Button btnOriginal = new Button("Usuario: ");
+        btnOriginal.setPrefSize(162, 66);
+        btnOriginal.setMnemonicParsing(false);
+        btnOriginal.getStyleClass().addAll("fuente32", "botonInterno");
+        btnOriginal.setCursor(Cursor.HAND);
+        HBox.setMargin(btnOriginal, new Insets(0, 50, 0, 0));
+        hbox.getChildren().add(btnOriginal);
+        hbox.setPadding(new Insets(0,0,0,100));
+// Añadir al nodo principal
+        nodoAjustes.getChildren().add(lblPersonalizacion);
+        nodoAjustes.getChildren().add(lblTemas);
+        nodoAjustes.getChildren().add(hbox);
     }
 }
