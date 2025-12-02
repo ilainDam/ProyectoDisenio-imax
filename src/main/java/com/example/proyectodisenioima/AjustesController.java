@@ -1,17 +1,24 @@
 package com.example.proyectodisenioima;
 
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
+import javafx.stage.Stage;
+
+import java.io.*;
+import java.util.Scanner;
 
 public class AjustesController {
 
@@ -133,35 +140,58 @@ public class AjustesController {
         escribir.write(css);
         escribir.close();
     }
-    public void onAjustesUsuario(){
-       nodoAjustes.getChildren().clear();
-//Personalizacion
+    public void onAjustesUsuario(ActionEvent evento) throws FileNotFoundException {
+        Scanner leer = new Scanner(new File("sesionActual.txt"));
+        nodoAjustes.getChildren().clear();
+        //Titulo
         Label lblPersonalizacion = new Label("Ajustes de usuario");
         lblPersonalizacion.setAlignment(Pos.CENTER);
         lblPersonalizacion.setPrefSize(1300, 85);
         lblPersonalizacion.getStyleClass().addAll("fuente42", "botonOpciones");
         VBox.setMargin(lblPersonalizacion, new Insets(25, 0, 0, 25));
-//Temas
+        //Titulo apartado
         Label lblTemas = new Label("Informacion del usuario");
         lblTemas.setPrefSize(1356, 50);
         lblTemas.getStyleClass().add("fuente32");
         VBox.setMargin(lblTemas, new Insets(20, 0, 0, 0));
         lblTemas.setPadding(new Insets(0, 0, 0, 30));
-//Original
+        //Apartado
         HBox hbox = new HBox();
         hbox.setAlignment(Pos.CENTER_LEFT);
-        hbox.setPrefSize(200, 100);
-        Button btnOriginal = new Button("Usuario: ");
-        btnOriginal.setPrefSize(162, 66);
-        btnOriginal.setMnemonicParsing(false);
-        btnOriginal.getStyleClass().addAll("fuente32", "botonInterno");
-        btnOriginal.setCursor(Cursor.HAND);
-        HBox.setMargin(btnOriginal, new Insets(0, 50, 0, 0));
+        hbox.setPrefSize(600, 100);
+        hbox.setPadding(new Insets(0, 0, 0, 100));
+        //Botones
+        Button btnOriginal = crearBoton("Usuario: " + leer.nextLine());
+        btnOriginal.setCursor(Cursor.DEFAULT);
+        Button btnCerrarSesion = crearBoton("Cerrar sesion");
+        EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                new File("sesionGuardada.txt").delete();
+                new Utilidades().abrirVentana(evento,"login.fxml","Login");
+            }
+        };
+        btnCerrarSesion.setOnAction(event);
+        Button btnCambiarCon = crearBoton("Cambiar contraseña");
+        //
+        HBox.setMargin(btnOriginal, new Insets(0, 25, 0, 0));
+        HBox.setMargin(btnCerrarSesion, new Insets(0, 25, 0, 0));
+        HBox.setMargin(btnCambiarCon, new Insets(0, 25, 0, 0));
         hbox.getChildren().add(btnOriginal);
-        hbox.setPadding(new Insets(0,0,0,100));
-// Añadir al nodo principal
+        hbox.getChildren().add(btnCerrarSesion);
+        hbox.getChildren().add(btnCambiarCon);
+        // Añadir al nodo principal
         nodoAjustes.getChildren().add(lblPersonalizacion);
         nodoAjustes.getChildren().add(lblTemas);
         nodoAjustes.getChildren().add(hbox);
+    }
+
+    public static Button crearBoton(String texto) {
+        Button btn = new Button(texto);
+        btn.setPrefSize(400, 66);
+        btn.setMnemonicParsing(false);
+        btn.getStyleClass().addAll("fuente32", "botonInterno");
+        btn.setCursor(Cursor.HAND);
+        return btn;
     }
 }

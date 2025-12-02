@@ -32,6 +32,7 @@ public class LoginController {
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
                 abrirBloquearArchivos(event);
                 if (guardarSesion.isSelected()){guardarSesion();}
+                usuarioActual(email.getText());
                 encontrado=true;
                 break;
             }
@@ -53,6 +54,12 @@ public class LoginController {
         FileWriter fw = new FileWriter("sesionGuardada.txt");
         BufferedWriter escribir = new BufferedWriter(fw);
         escribir.write(email.getText()+","+contrasenia.getText());
+        escribir.close();
+    }
+    public void usuarioActual(String usuario) throws IOException {
+        FileWriter fw = new FileWriter("sesionActual.txt");
+        BufferedWriter escribir = new BufferedWriter(fw);
+        escribir.write(usuario);
         escribir.close();
     }
 }

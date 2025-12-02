@@ -46,6 +46,7 @@ public class LoginApplication extends Application {
             while (leerU.hasNext()){
                 if (leerU.nextLine().equalsIgnoreCase(lineaSesion)){
                     encontrado=true;
+                    new LoginController().usuarioActual(lineaSesion.split(",")[0]);
                     break;
                 }
             }
