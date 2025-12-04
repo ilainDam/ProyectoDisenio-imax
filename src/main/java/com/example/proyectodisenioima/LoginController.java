@@ -37,10 +37,12 @@ public class LoginController {
                 break;
             }
         }
-        if (!encontrado){
-            Alert alerta = new Alert(Alert.AlertType.ERROR);
-            alerta.setTitle("Credenciales incorrectos");
-            alerta.setContentText("Las credenciales son incorrectas revise la escritura o si no se acuerda de la contraseña dele al boton ¿Olvidaste tu contraseña?");
+        if (!encontrado) {
+            Alert alerta = new Utilidades().alerta(
+                    Alert.AlertType.ERROR,
+                    "Credenciales incorrectos",
+                    "Las credenciales son incorrectas revise la escritura o si no se acuerda de la contraseña dele al boton ¿Olvidaste tu contraseña?"
+            );
             alerta.showAndWait();
         }
         leer.close();

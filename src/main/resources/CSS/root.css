@@ -32,3 +32,7 @@
             -fx-border-color: black;
             -fx-border-width: 0 4px 4px 4px;
         }
+.alerta > *{
+            -fx-font-size: 22px;
+-fx-background-color: -fx-principal-bg-color ;
+}

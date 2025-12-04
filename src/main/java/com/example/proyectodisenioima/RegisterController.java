@@ -17,29 +17,44 @@ import java.util.Scanner;
 public class RegisterController {
     @FXML
     private TextField email;
-    @FXML private PasswordField contrasenia;
-    @FXML private PasswordField contraseniaRepetida;
+    @FXML
+    private PasswordField contrasenia;
+    @FXML
+    private PasswordField contraseniaRepetida;
 
     @FXML
     public void onRegister(ActionEvent event) throws IOException {
-        FileWriter fw = new FileWriter("usuarios.txt",true);
-        BufferedWriter escribir = new BufferedWriter(fw);
-        if (contraseniaRepetida.getText().equals(contrasenia.getText())){
-            escribir.write(email.getText()+","+contraseniaRepetida.getText());
-            escribir.newLine();
-            abrirLogin(event);
-            escribir.close();
-        }else{
-            Alert alerta = new Alert(Alert.AlertType.ERROR);
-            alerta.setTitle("Constraseñas no coinciden");
-            alerta.setContentText("Las contraseñas no coinciden revisa la escritura ");
-            alerta.show();
+        if (contrasenia.getText().isEmpty()
+                || contraseniaRepetida.getText().isEmpty()
+                || email.getText().isEmpty()) {
+            Alert alerta = new Utilidades().alerta(
+                    Alert.AlertType.ERROR,
+                    "Credenciales vacias",
+                    "No pueden existir credenciales vacias"
+            );
+            alerta.showAndWait();
+        } else {
+            FileWriter fw = new FileWriter("usuarios.txt", true);
+            BufferedWriter escribir = new BufferedWriter(fw);
+            if (contraseniaRepetida.getText().equals(contrasenia.getText())) {
+                escribir.write(email.getText() + "," + contraseniaRepetida.getText());
+                escribir.newLine();
+                abrirLogin(event);
+                escribir.close();
+            } else {
+                Alert alerta = new Utilidades().alerta(
+                        Alert.AlertType.ERROR,
+                        "Constraseñas no coinciden",
+                        "Las contraseñas no coinciden revisa la escritura"
+                );
+                alerta.showAndWait();
+            }
         }
     }
 
     @FXML
     public void abrirLogin(ActionEvent event) {
-        new Utilidades().abrirVentana(event,"login.fxml","Login");
+        new Utilidades().abrirVentana(event, "login.fxml", "Login");
     }
 
     @FXML

@@ -3,19 +3,13 @@ package com.example.proyectodisenioima;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.Scanner;
@@ -30,8 +24,8 @@ public class AjustesController {
     }
 
     @FXML
-    public void onNegro() {
-
+    public void onNegro(ActionEvent event) {
+        new Utilidades().abrirVentana(event,"trabajando.fxml","Trabajando");
     }
 
     @FXML
@@ -86,7 +80,11 @@ public class AjustesController {
                 "            -fx-background-color: -fx-principal-rs-color;\n" +
                 "            -fx-border-color: black;\n" +
                 "            -fx-border-width: 0 4px 4px 4px;\n" +
-                "        }";
+                "        }"+
+                ".alerta > *{\n" +
+                "            -fx-font-size: 22px;\n" +
+                "-fx-background-color: -fx-principal-bg-color ;\n" +
+                "}";
 
         escribir.write(css);
         escribir.close();
@@ -135,7 +133,10 @@ public class AjustesController {
                 "            -fx-background-color: -fx-principal-rs-color;\n" +
                 "            -fx-border-color: black;\n" +
                 "            -fx-border-width: 0 4px 4px 4px;\n" +
-                "        }";
+                "        }"+".alerta > *{\n" +
+                "            -fx-font-size: 22px;\n" +
+                "-fx-background-color: -fx-principal-bg-color ;\n" +
+                "}";
 
         escribir.write(css);
         escribir.close();
@@ -164,15 +165,21 @@ public class AjustesController {
         Button btnOriginal = crearBoton("Usuario: " + leer.nextLine());
         btnOriginal.setCursor(Cursor.DEFAULT);
         Button btnCerrarSesion = crearBoton("Cerrar sesion");
-        EventHandler<ActionEvent> event = new EventHandler<ActionEvent>() {
+        btnCerrarSesion.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 new File("sesionGuardada.txt").delete();
                 new Utilidades().abrirVentana(evento,"login.fxml","Login");
             }
-        };
-        btnCerrarSesion.setOnAction(event);
+        });
+        //
         Button btnCambiarCon = crearBoton("Cambiar contraseña");
+        btnCambiarCon.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                new Utilidades().abrirVentana(evento,"trabajando.fxml","Trabajando");
+            }
+        });
         //
         HBox.setMargin(btnOriginal, new Insets(0, 25, 0, 0));
         HBox.setMargin(btnCerrarSesion, new Insets(0, 25, 0, 0));
