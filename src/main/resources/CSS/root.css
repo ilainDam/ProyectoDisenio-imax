@@ -3,13 +3,13 @@
             src: url("../font/Jersey15-Regular.ttf") format("truetype");
         }
 *{
-            -fx-principal-bg-color:#FFEECF;
-            -fx-secundario-bg-color:#FFC482;
-            -fx-principal-rs-color:#65DEF1;
-            -fx-secundario-rs-color:#2B59C3;
-            -fx-terciario-rs-color:#04F06A;
-            -fx-principal-font-color:black;
-            -fx-secundario-font-color:white;
+            -fx-principal-bg-color:#ffeecf;
+            -fx-secundario-bg-color:#ffc482;
+            -fx-principal-rs-color:#65def1;
+            -fx-secundario-rs-color:#2b59c3;
+            -fx-terciario-rs-color:#04f06a;
+            -fx-principal-font-color:#000000;
+            -fx-secundario-font-color:#ffffff;
             -fx-font-family: 'Jersey 15';
             -fx-especial:black;
         }
@@ -31,8 +31,7 @@
             -fx-background-color: -fx-principal-rs-color;
             -fx-border-color: black;
             -fx-border-width: 0 4px 4px 4px;
-        }
-.alerta > *{
+        }.alerta > *{
             -fx-font-size: 22px;
 -fx-background-color: -fx-principal-bg-color ;
 }

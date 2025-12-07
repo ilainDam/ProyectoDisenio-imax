@@ -1,6 +1,7 @@
 package com.example.proyectodisenioima;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.paint.Color;
 
@@ -38,6 +39,9 @@ public class ColorPersonalizadoController {
                 toHexColor(seis.getValue()),
                 toHexColor(siete.getValue())
         );
+        new Utilidades().alerta(Alert.AlertType.INFORMATION,
+                "Tema personalizado aplicado",
+                "Se ha aplicado el tema personalizado correctamente, es necesario reiniciar la aplicacion para ver los cambios").showAndWait();
     }
 
 }

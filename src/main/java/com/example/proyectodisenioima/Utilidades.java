@@ -18,10 +18,15 @@ public class Utilidades {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(ventanaFXML));
             Parent root = loader.load();
-            Scene scene = new Scene(root, 1920, 1080);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            double ancho = stage.getWidth();
+            double alto = stage.getHeight();
+            boolean estabaMaximizada = stage.isMaximized();
+            boolean estabaPantallaCompleta = stage.isFullScreen();
+            Scene scene = new Scene(root, ancho > 0 ? ancho : 800, alto > 0 ? alto : 600);
             stage.setScene(scene);
-            stage.setFullScreen(true);
+            stage.setMaximized(estabaMaximizada);
+            stage.setFullScreen(estabaPantallaCompleta);
             stage.setFullScreenExitHint("");
             stage.setTitle(titulo);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/icono.png")));

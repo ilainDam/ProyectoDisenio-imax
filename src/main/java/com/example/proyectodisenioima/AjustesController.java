@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Cursor;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
@@ -21,6 +22,9 @@ public class AjustesController {
     @FXML
     public void onOriginal() throws IOException {
         this.crearCss("#FFEECF","#FFC482","#65DEF1","#2B59C3","#04F06A","black","white");
+        new Utilidades().alerta(Alert.AlertType.INFORMATION,
+                "Tema original aplicado",
+                "Se ha aplicado el tema original correctamente, es necesario reiniciar la aplicacion para ver los cambios").showAndWait();
     }
 
     @FXML
@@ -31,6 +35,10 @@ public class AjustesController {
     @FXML
     public void onBlanco() throws IOException {
         this.crearCss("#FFFFFF","#F5F5F5","#FFFFFF","#E0E0E0","#CCCCCC","black","#000000","white");
+        new Utilidades().alerta(Alert.AlertType.INFORMATION,
+                "Tema blanco aplicado",
+                "Se ha aplicado el tema blanco correctamente, es necesario reiniciar la aplicacion para ver los cambios").showAndWait();
+        ;
     }
 
     @FXML
