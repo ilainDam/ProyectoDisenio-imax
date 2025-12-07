@@ -30,7 +30,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="402.0" text="Personalizacion">
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="402.0" text="Personalización">
                      <VBox.margin>
                         <Insets bottom="25.0" top="25.0" />
                      </VBox.margin>
@@ -78,7 +78,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="402.0" text="Facturacion">
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="402.0" text="Facturación">
                      <VBox.margin>
                         <Insets bottom="25.0" top="25.0" />
                      </VBox.margin>
@@ -96,7 +96,7 @@
                   <Insets left="25.0" />
                </HBox.margin>
                <children>
-                  <Label alignment="CENTER" prefHeight="85.0" prefWidth="1300.0" text="Personalizacion" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="85.0" prefWidth="1300.0" text="Personalización" textAlignment="CENTER">
                      <VBox.margin>
                         <Insets left="25.0" top="25.0" />
                      </VBox.margin>
@@ -168,7 +168,7 @@
                         <Insets left="100.0" />
                      </padding>
                   </HBox>
-                  <Label prefHeight="50.0" prefWidth="1356.0" styleClass="fuente32" text="Icono de la aplicacion">
+                  <Label prefHeight="50.0" prefWidth="1356.0" styleClass="fuente32" text="Icono de la aplicación">
                      <padding>
                         <Insets left="30.0" />
                      </padding>
