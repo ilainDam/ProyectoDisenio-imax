@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.net.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
 
-<HBox id="root" alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.LoginController">
+<HBox id="root" alignment="CENTER" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.LoginController">
     <children>
         <VBox id="izquierda" alignment="CENTER" prefHeight="1080.0" prefWidth="1008.0">
             <children>
@@ -74,6 +82,9 @@
                             <HBox.margin>
                                 <Insets />
                             </HBox.margin>
+                     <tooltip>
+                        <Tooltip text="Te permite elegir si la proxima vez que abras el progrma se inicie sesion de forma automatica" />
+                     </tooltip>
                         </CheckBox>
                         <Hyperlink prefHeight="100.0" prefWidth="383.0" styleClass="fuente32" text="¿Olvidaste tu contraseña?" textAlignment="CENTER">
                         </Hyperlink>
