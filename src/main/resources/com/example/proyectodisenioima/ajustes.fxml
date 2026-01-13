@@ -33,7 +33,7 @@
                   <Insets left="50.0" />
                </HBox.margin>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="402.0" text="Personalización">
+                  <Button mnemonicParsing="false" onAction="#onPersonalizacion" prefHeight="100.0" prefWidth="402.0" text="Personalización">
                      <VBox.margin>
                         <Insets bottom="25.0" top="25.0" />
                      </VBox.margin>

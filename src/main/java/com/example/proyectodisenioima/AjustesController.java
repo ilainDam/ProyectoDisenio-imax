@@ -200,7 +200,9 @@ public class AjustesController {
         nodoAjustes.getChildren().add(lblTemas);
         nodoAjustes.getChildren().add(hbox);
     }
-
+    public void onPersonalizacion(ActionEvent event){
+        new Utilidades().abrirVentana(event,"ajustes.fxml","Ajustes");
+    }
     public static Button crearBoton(String texto) {
         Button btn = new Button(texto);
         btn.setPrefSize(400, 66);
