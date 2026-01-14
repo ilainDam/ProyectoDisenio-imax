@@ -18,7 +18,7 @@ import java.util.Scanner;
 public class LoginController {
     @FXML private TextField email;
     @FXML private PasswordField contrasenia;
-    @FXML private CheckBox checkGuardarSesion;
+    @FXML private CheckBox guardarSesion;
 
     @FXML
     public void onLogin(ActionEvent event) throws IOException {
@@ -31,7 +31,7 @@ public class LoginController {
             lineaSeparada = linea.split(",");
             if (email.getText().equals(lineaSeparada[0])&&contrasenia.getText().equals(lineaSeparada[1])){
                 abrirBloquearArchivos(event);
-                if (checkGuardarSesion.isSelected()){
+                if (guardarSesion.isSelected()){
                     guardarSesion();
                 }
                 usuarioActual(email.getText());
