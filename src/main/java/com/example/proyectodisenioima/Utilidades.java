@@ -64,7 +64,7 @@ public class Utilidades {
     private void mostrarAyuda() {
             Stage ayudaStage = new Stage();
             WebView webView = new WebView();
-            String url = getClass().getResource("/HelpNDoc/HTML/Lockit.html").toExternalForm();
+            String url = getClass().getResource("/HelpNDoc/HTML/LockIt.html").toExternalForm();
             webView.getEngine().load(url);
             Scene scene = new Scene(webView, 900, 600);
             ayudaStage.setScene(scene);
