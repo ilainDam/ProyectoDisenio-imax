@@ -1,6 +1,7 @@
 package com.example.proyectodisenioima;
 
 import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -9,8 +10,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 
+import java.awt.*;
+import java.awt.event.KeyEvent;
+import java.io.File;
 import java.io.IOException;
 
 public class Utilidades {
@@ -24,6 +29,7 @@ public class Utilidades {
             boolean estabaMaximizada = stage.isMaximized();
             boolean estabaPantallaCompleta = stage.isFullScreen();
             Scene scene = new Scene(root, ancho > 0 ? ancho : 800, alto > 0 ? alto : 600);
+            scene = añadirAyuda(scene);
             stage.setScene(scene);
             stage.setMaximized(estabaMaximizada);
             stage.setFullScreen(estabaPantallaCompleta);
@@ -45,6 +51,22 @@ public class Utilidades {
         dp.getStyleClass().add("alerta");
         dp.getStylesheets().add(getClass().getResource("/CSS/root.css").toExternalForm());
         return alerta;
+    }
+    public Scene añadirAyuda(Scene escena) {
+        escena.setOnKeyPressed(e -> {
+             if (e.getCode() == KeyCode.F1) {
+                 System.out.println("aa");
+                 /*
+                try {
+                    File html = new File("./HelpNDoc/HTML/LockIt.html");
+                    Desktop.getDesktop().browse(html.toURI());
+                } catch (IOException ex) {
+                    ex.printStackTrace();
+                }
+                */
+            }
+        });
+        return escena;
     }
 
 }

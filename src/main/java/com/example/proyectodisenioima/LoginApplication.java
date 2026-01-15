@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.input.KeyCode;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 
@@ -19,6 +20,7 @@ public class LoginApplication extends Application {
         if (sesionIniciada()){
             FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("bloquearArchivos.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
+            scene = new Utilidades().añadirAyuda(scene);
             stage.setTitle("bloquear Archivos");
             stage.setScene(scene);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/icono.png")));
@@ -28,6 +30,7 @@ public class LoginApplication extends Application {
         }else {
             FXMLLoader fxmlLoader = new FXMLLoader(LoginApplication.class.getResource("register.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1920, 1080);
+            scene = new Utilidades().añadirAyuda(scene);
             stage.setTitle("Register");
             stage.setScene(scene);
             stage.getIcons().add(new Image(getClass().getResourceAsStream("/IMG/icono.png")));
