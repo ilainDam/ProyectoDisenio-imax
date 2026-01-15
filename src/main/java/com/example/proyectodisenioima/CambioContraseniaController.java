@@ -61,7 +61,7 @@ public class CambioContraseniaController {
     @FXML
     public void crearInformeJasper() {
         try {
-            InputStream jasperStream = getClass().getResourceAsStream("/Blank_A4.jasper");
+            InputStream jasperStream = getClass().getResourceAsStream("/ExamenDAD-ima.jasper");
             File csvFile = new File("solicitudes_cambio_contrasena.csv");
             JRCsvDataSource dataSource = new JRCsvDataSource(csvFile);
             dataSource.setUseFirstRowAsHeader(true);
