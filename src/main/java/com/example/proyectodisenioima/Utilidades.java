@@ -11,8 +11,8 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.DialogPane;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.File;
@@ -55,18 +55,24 @@ public class Utilidades {
     public Scene añadirAyuda(Scene escena) {
         escena.setOnKeyPressed(e -> {
              if (e.getCode() == KeyCode.F1) {
-                 System.out.println("aa");
-                 /*
-                try {
-                    File html = new File("./HelpNDoc/HTML/LockIt.html");
-                    Desktop.getDesktop().browse(html.toURI());
-                } catch (IOException ex) {
-                    ex.printStackTrace();
-                }
-                */
+                 mostrarAyuda();
+                 e.consume();
             }
         });
         return escena;
+    }
+    private void mostrarAyuda() {
+            Stage ayudaStage = new Stage();
+            WebView webView = new WebView();
+            String url = getClass().getResource("/HelpNDoc/HTML/Lockit.html").toExternalForm();
+            webView.getEngine().load(url);
+            Scene scene = new Scene(webView, 900, 600);
+            ayudaStage.setScene(scene);
+            ayudaStage.setTitle("Ayuda");
+            ayudaStage.getIcons().add(
+                    new Image(getClass().getResourceAsStream("/IMG/icono.png"))
+            );
+            ayudaStage.show();
     }
 
 }
