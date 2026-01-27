@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.proyectodisenioima.CambioContraseniaController">
+    <children>
+        <Label text="Nombre y apellidos:"/>
+        <TextField fx:id="nombreApellidosField"/>
+        <Label text="Email:"/>
+        <TextField fx:id="emailField"/>
+        <Label text="Título solicitud cambio contraseña:"/>
+        <TextField fx:id="tituloSolicitudField"/>
+        <Label text="Texto explicando el cambio de contraseña:"/>
+        <TextArea fx:id="explicacionArea"/>
+        <Label text="Contraseña nueva:"/>
+        <PasswordField fx:id="nuevaContrasenaField"/>
+        <HBox spacing="10">
+            <children>
+                <Button text="Enviar" onAction="#enviarSolicitudCambioContrasena"/>
+                <Button text="Crear Informe Jasper" onAction="#crearInformeJasper"/>
+            </children>
+        </HBox>
+    </children>
+</VBox>

@@ -86,7 +86,7 @@
                         <Tooltip text="Te permite elegir si la proxima vez que abras el progrma se inicie sesion de forma automatica" />
                      </tooltip>
                         </CheckBox>
-                        <Hyperlink prefHeight="100.0" prefWidth="383.0" styleClass="fuente32" text="¿Olvidaste tu contraseña?" textAlignment="CENTER">
+                        <Hyperlink onAction="#abrirSolicitudCambioContrasena" prefHeight="100.0" prefWidth="383.0" styleClass="fuente32" text="¿Olvidaste tu contraseña?" textAlignment="CENTER">
                         </Hyperlink>
                     </children>
                 </HBox>
